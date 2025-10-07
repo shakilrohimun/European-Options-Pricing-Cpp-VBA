@@ -25,7 +25,7 @@ with constant short rate \(r\) and constant volatility \(\sigma\). Pricing uses 
 P_t = \mathbb{E}\!\left[e^{-r(T-t)}\,f(S_T)\,\middle|\,\mathcal{F}_t\right].
 ```
 
-(Construction and use of the GBM and the risk-neutral expectation are developed in the report.) :contentReference[oaicite:1]{index=1}
+(Construction and use of the GBM and the risk-neutral expectation are developed in the report.)
 
 ---
 
@@ -61,7 +61,7 @@ d_1 = \frac{\ln(S/K) + (r + \tfrac12\sigma^2)\tau}{\sigma\sqrt{\tau}},
 d_2 = d_1 - \sigma\sqrt{\tau},
 ```
 
-and \(\Phi\) the standard normal CDF. The **put–call parity** \(C-P = S - K e^{-r\tau}\) follows from a forward replication argument. (Full derivations—including the put first, then the call via parity—are provided in the report.) :contentReference[oaicite:2]{index=2}
+and \(\Phi\) the standard normal CDF. The **put–call parity** \(C-P = S - K e^{-r\tau}\) follows from a forward replication argument. (Full derivations—including the put first, then the call via parity—are provided in the report.)
 
 ---
 
@@ -102,7 +102,7 @@ Under Black–Scholes, key sensitivities are:
   \rho_{\text{put}}  = -K\tau e^{-r\tau}\,\Phi(-d_2).
   ```
 
-(Definitions, properties, and proofs are laid out in the Greeks chapter.) :contentReference[oaicite:3]{index=3}
+(Definitions, properties, and proofs are laid out in the Greeks chapter.)
 
 ---
 
@@ -110,7 +110,7 @@ Under Black–Scholes, key sensitivities are:
 
 Consider a portfolio long \(\Delta_t\) units of \(S_t\) and short one option \(V(t,S_t)\):
 \(\Pi_t = \Delta_t S_t - V(t,S_t)\).
-Choosing \(\Delta_t = \partial V/\partial S\) eliminates the diffusion term in \(\mathrm{d}\Pi_t\), making the portfolio locally riskless and thus earning the risk-free rate \(r\). This **delta hedging** argument both yields the PDE and underpins practical risk control. (Self-financing and delta-neutrality are detailed in the report.) :contentReference[oaicite:4]{index=4}
+Choosing \(\Delta_t = \partial V/\partial S\) eliminates the diffusion term in \(\mathrm{d}\Pi_t\), making the portfolio locally riskless and thus earning the risk-free rate \(r\). This **delta hedging** argument both yields the PDE and underpins practical risk control. (Self-financing and delta-neutrality are detailed in the report.)
 
 ---
 
@@ -139,9 +139,9 @@ Here \(\sigma(t,S)\) is a (deterministic) function calibrated to market option p
 
 ## Theoretical Takeaways
 
-- **Risk-neutral pricing** + **no-arbitrage hedging** \(\Rightarrow\) Black–Scholes PDE and closed-form solutions for European options. :contentReference[oaicite:6]{index=6}  
-- **Greeks** quantify first- and second-order sensitivities, crucial for hedging and risk management. :contentReference[oaicite:7]{index=7}  
-- **Local Volatility** generalizes constant-\(\sigma\) models by allowing \(\sigma(t,S)\), improving consistency with market smiles while preserving a one-factor diffusion and a parabolic pricing PDE. :contentReference[oaicite:8]{index=8}
+- **Risk-neutral pricing** + **no-arbitrage hedging** \(\Rightarrow\) Black–Scholes PDE and closed-form solutions for European options.
+- **Greeks** quantify first- and second-order sensitivities, crucial for hedging and risk management. 
+- **Local Volatility** generalizes constant-\(\sigma\) models by allowing \(\sigma(t,S)\), improving consistency with market smiles while preserving a one-factor diffusion and a parabolic pricing PDE.
 
 ---
 
