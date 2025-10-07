@@ -1,0 +1,211 @@
+' Déclarations des fonctions externes pour appeler les fonctions de la DLL
+
+' d1 et d2
+Public Declare PtrSafe Function get_d1 Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+Public Declare PtrSafe Function get_d2 Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+' Prix Call Put
+Public Declare PtrSafe Function calculate_call_price Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+Public Declare PtrSafe Function calculate_put_price Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+' Delta
+Public Declare PtrSafe Function calculate_call_delta Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+Public Declare PtrSafe Function calculate_put_delta Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+' Gamma
+Public Declare PtrSafe Function calculate_gamma Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+' Vega
+Public Declare PtrSafe Function calculate_vega Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+' Theta
+Public Declare PtrSafe Function calculate_call_theta Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+Public Declare PtrSafe Function calculate_put_theta Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+' Rho
+Public Declare PtrSafe Function calculate_call_rho Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+Public Declare PtrSafe Function calculate_put_rho Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal volatility As Double, _
+    ByVal timeToMaturity As Double) As Double
+
+' Volatilite local
+Public Declare PtrSafe Function calculate_local_vol_call_price Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal timeToMaturity As Double, _
+    ByVal sigma_0 As Double, _
+    ByVal alpha As Double, _
+    ByVal beta As Double) As Double
+
+Public Declare PtrSafe Function calculate_local_vol_put_price Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal timeToMaturity As Double, _
+    ByVal sigma_0 As Double, _
+    ByVal alpha As Double, _
+    ByVal beta As Double) As Double
+
+' Hedge
+Public Declare PtrSafe Function hedge_call_option Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal timeToMaturity As Double, _
+    ByVal sigma_0 As Double, _
+    ByVal alpha As Double, _
+    ByVal beta As Double) As Double
+
+Public Declare PtrSafe Function hedge_put_option Lib "C:\Users\shaki\OneDrive\Bureau\Stage M1\Projet_vollocale\x64\Debug\Projet_vollocale.dll" ( _
+    ByVal spot As Double, _
+    ByVal strike As Double, _
+    ByVal rate As Double, _
+    ByVal timeToMaturity As Double, _
+    ByVal sigma_0 As Double, _
+    ByVal alpha As Double, _
+    ByVal beta As Double) As Double
+
+' d1
+Function OptionD1(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    OptionD1 = get_d1(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' d2
+Function OptionD2(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    OptionD2 = get_d2(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Prix Call
+Function PriceCall(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    PriceCall = calculate_call_price(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Prix Put
+Function PricePut(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    PricePut = calculate_put_price(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Delta Call
+Function DeltaCall(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    DeltaCall = calculate_call_delta(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Delta Put
+Function DeltaPut(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    DeltaPut = calculate_put_delta(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Gamma
+Function GammaOption(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    GammaOption = calculate_gamma(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Vega
+Function Vega(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    Vega = calculate_vega(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Theta Call
+Function ThetaCall(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    ThetaCall = calculate_call_theta(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Theta Put
+Function ThetaPut(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    ThetaPut = calculate_put_theta(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Rho Call
+Function RhoCall(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    RhoCall = calculate_call_rho(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Rho Put
+Function RhoPut(spot As Double, strike As Double, rate As Double, volatility As Double, timeToMaturity As Double) As Double
+    RhoPut = calculate_put_rho(spot, strike, rate, volatility, timeToMaturity)
+End Function
+
+' Volatilite locale Call
+Function LocalVolCallPrice(spot As Double, strike As Double, rate As Double, timeToMaturity As Double, sigma_0 As Double, alpha As Double, beta As Double) As Double
+    LocalVolCallPrice = calculate_local_vol_call_price(spot, strike, rate, timeToMaturity, sigma_0, alpha, beta)
+End Function
+
+' Volatilite locale Put
+Function LocalVolPutPrice(spot As Double, strike As Double, rate As Double, timeToMaturity As Double, sigma_0 As Double, alpha As Double, beta As Double) As Double
+    LocalVolPutPrice = calculate_local_vol_put_price(spot, strike, rate, timeToMaturity, sigma_0, alpha, beta)
+End Function
+
+' Hedge Call
+Function HedgeCall(spot As Double, strike As Double, rate As Double, timeToMaturity As Double, sigma_0 As Double, alpha As Double, beta As Double) As Double
+    HedgeCall = hedge_call_option(spot, strike, rate, timeToMaturity, sigma_0, alpha, beta)
+End Function
+
+' Hedge Put
+Function HedgePut(spot As Double, strike As Double, rate As Double, timeToMaturity As Double, sigma_0 As Double, alpha As Double, beta As Double) As Double
+    HedgePut = hedge_put_option(spot, strike, rate, timeToMaturity, sigma_0, alpha, beta)
+End Function
+
